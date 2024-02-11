@@ -124,28 +124,131 @@
     combos {
         compatible = "zmk,combos";
 
-        // both right thumb keys
-
-        combo_accent {
-            timeout-ms = <300>;
-            key-positions = <32 33>;
-            bindings = <&mo 0>;
+        escape-combo {
+            bindings = <&kp ESC>;
+            key-positions = <35 38>;
         };
 
-        // internal-left & external-right thumb keys
-
-        combo_sym2 {
-            timeout-ms = <200>;
-            key-positions = <31 33>;
-            bindings = <&mo 0>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <37 36>;
         };
 
-        // both left thumb keys
+        enter-right {
+            bindings = <&kp ENTER>;
+            key-positions = <42 43>;
+        };
 
-        combo_settings {
-            timeout-ms = <300>;
-            key-positions = <30 31>;
-            bindings = <&mo 0>;
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <60 61>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <38 37>;
+        };
+
+        backspace-right {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <41 42>;
+        };
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <59 60>;
+        };
+
+        space-left {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <24 25>;
+            require-prior-idle-ms = <200>;
+        };
+
+        space-right {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <25 26>;
+            require-prior-idle-ms = <200>;
+        };
+
+        tab-prev {
+            bindings = <&kp LC(GRAVE)>;
+            key-positions = <48 49>;
+        };
+
+        tab-next {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <50 49>;
+        };
+
+        delete-word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <36 37 38>;
+        };
+
+        volume-up {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <28 40>;
+        };
+
+        volume-down {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <58 40>;
+        };
+
+        play-pause {
+            bindings = <&kp C_PLAY_PAUSE>;
+            key-positions = <58 28>;
+        };
+
+        colon-combo {
+            bindings = <&kp COLON>;
+            key-positions = <23 35>;
+        };
+
+        semicolon-combo {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <47 35>;
+        };
+
+        hyphen-combo {
+            bindings = <&kp MINUS>;
+            key-positions = <24 36>;
+        };
+
+        underscore-combo {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <36 48>;
+        };
+
+        parenth-left-combo {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <25 37>;
+        };
+
+        parenth-right-combo {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <37 49>;
+        };
+
+        bracket-left-combo {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <38 26>;
+        };
+
+        bracket-right-combo {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <38 50>;
+        };
+
+        brace-left {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <27 39>;
+        };
+
+        brace-right {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <39 51>;
         };
     };
 
