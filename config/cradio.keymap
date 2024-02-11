@@ -300,20 +300,5 @@
             >;
         };
 
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
-            >;
-        };
-
-        // Numbers and high frequency symbols
-        // Main modifiers and arrow keys
-        // Function keys with modifiers
-        // Low frequency symbols.
-        // Used to type regional accents.
-        // Used to change the keyboard's settings.num_nav {};
     };
 };
