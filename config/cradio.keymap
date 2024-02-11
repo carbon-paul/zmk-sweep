@@ -8,15 +8,45 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// Layer definitions
+// Key definitions
+#define POS_LH_T1 30
+#define POS_LH_T2 31
+#define POS_LH_C1R1 4
+#define POS_LH_C1R2 14
+#define POS_LH_C1R3 24
+#define POS_LH_C2R1 3
+#define POS_LH_C2R2 13
+#define POS_LH_C2R3 23
+#define POS_LH_C3R1 2
+#define POS_LH_C3R2 12
+#define POS_LH_C3R3 22
+#define POS_LH_C4R1 1
+#define POS_LH_C4R2 11
+#define POS_LH_C4R3 21
+#define POS_LH_C5R1 0
+#define POS_LH_C5R2 10
+#define POS_LH_C5R3 20
+#define POS_RH_T1 32
+#define POS_RH_T2 33
+#define POS_RH_C1R1 5
+#define POS_RH_C1R2 15
+#define POS_RH_C1R3 25
+#define POS_RH_C2R1 6
+#define POS_RH_C2R2 16
+#define POS_RH_C2R3 26
+#define POS_RH_C3R1 7
+#define POS_RH_C3R2 17
+#define POS_RH_C3R3 27
+#define POS_RH_C4R1 8
+#define POS_RH_C4R2 18
+#define POS_RH_C4R3 28
+#define POS_RH_C5R1 9
+#define POS_RH_C5R2 19
+#define POS_RH_C5R3 29
 
-#define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
+#define KEYS_LEFT POS_LH_C1R1 4  POS_LH_C1R2 14  POS_LH_C1R3 24  POS_LH_C2R1 3  POS_LH_C2R2 13  POS_LH_C2R3 23  POS_LH_C3R1 2  POS_LH_C3R2 12  POS_LH_C3R3 22  POS_LH_C4R1 1  POS_LH_C4R2 11  POS_LH_C4R3 21  POS_LH_C5R1 0  POS_LH_C5R2 10  POS_LH_C5R3 20
+#define KEYS_RIGHT POS_RH_C1R1 4  POS_RH_C1R2 14  POS_RH_C1R3 24  POS_RH_C2R1 3  POS_RH_C2R2 13  POS_RH_C2R3 23  POS_RH_C3R1 2  POS_RH_C3R2 12  POS_RH_C3R3 22  POS_RH_C4R1 1  POS_RH_C4R2 11  POS_RH_C4R3 21  POS_RH_C5R1 0  POS_RH_C5R2 10  POS_RH_C5R3 20
+#define THUMBS POS_LH_T1 POS_LH_T2 POS_RH_T1 POS_RH_T2
 
 // -----------------
 
@@ -110,15 +140,6 @@
 
 / {
     macros {
-        // sometimes my device thinks a modifier is being held down
-        // pressing all modifiers fixes it.
-
-        unstick: unstick {
-            label = "ZM_unstick";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
-        };
     };
 
     combos {
