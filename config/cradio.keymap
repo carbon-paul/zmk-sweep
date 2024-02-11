@@ -275,18 +275,18 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                &kp E            &kp R                 &kp T              &kp Y                &kp U              &kp I            &kp O                &kp P
-&hml LEFT_GUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F     &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_GUI SQT
-&kp Z            &kp X                &kp C            &kp V                 &kp B              &kp N                &kp M              &kp COMMA        &kp DOT              &kp SLASH
+&kp Q            &ht LG(W) W          &kp E            &ht LG(R) R           &ht LG(T) T        &kp Y                &kp U              &kp I            &kp O                &kp P
+&hml LEFT_ALT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F     &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J  &hmr LEFT_GUI K  &hmr LEFT_CONTROL L  &hmr LEFT_ALT SQT
+&kp Z            &ht LG(X) X          &ht LG(C) C      &ht LG(V) V           &kp B              &kp N                &kp M              &kp COMMA        &kp DOT              &kp SLASH
                                                        &hold_temp_layer 1 1  &sk LEFT_SHIFT     &kp SPACE            &sl 2
             >;
         };
 
         num_nav {
             bindings = <
-&trans        &trans     &kp UP     &trans         &trans     &kp PERCENT     &kp N5     &kp N2  &kp N3  &kp COLON
-&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END    &kp DOLLAR      &kp N4     &kp N5  &kp N6  &kp N0
-&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &trans     &kp UNDERSCORE  &kp MINUS  &kp N8  &kp N9  &kp DOT
+&none         &none      &kp UP     &none          &none     &kp PERCENT     &kp N5     &kp N2  &kp N3  &kp COLON
+&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END   &kp DOLLAR      &kp N4     &kp N5  &kp N6  &kp N0
+&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &none     &kp UNDERSCORE  &kp MINUS  &kp N8  &kp N9  &kp DOT
                                     &trans         &trans     &trans          &trans
             >;
         };
