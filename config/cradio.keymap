@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 // Key definitions
+
 #define POS_LH_T1 30
 #define POS_LH_T2 31
 #define POS_LH_C1R1 4
@@ -43,7 +44,6 @@
 #define POS_RH_C5R1 9
 #define POS_RH_C5R2 19
 #define POS_RH_C5R3 29
-
 #define KEYS_LEFT POS_LH_C1R1 4  POS_LH_C1R2 14  POS_LH_C1R3 24  POS_LH_C2R1 3  POS_LH_C2R2 13  POS_LH_C2R3 23  POS_LH_C3R1 2  POS_LH_C3R2 12  POS_LH_C3R3 22  POS_LH_C4R1 1  POS_LH_C4R2 11  POS_LH_C4R3 21  POS_LH_C5R1 0  POS_LH_C5R2 10  POS_LH_C5R3 20
 #define KEYS_RIGHT POS_RH_C1R1 4  POS_RH_C1R2 14  POS_RH_C1R3 24  POS_RH_C2R1 3  POS_RH_C2R2 13  POS_RH_C2R3 23  POS_RH_C3R1 2  POS_RH_C3R2 12  POS_RH_C3R3 22  POS_RH_C4R1 1  POS_RH_C4R2 11  POS_RH_C4R3 21  POS_RH_C5R1 0  POS_RH_C5R2 10  POS_RH_C5R3 20
 #define THUMBS POS_LH_T1 POS_LH_T2 POS_RH_T1 POS_RH_T2
@@ -120,10 +120,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <300>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <400>;
         };
 
         hold_temp_layer: hold_temp_layer {
@@ -139,9 +139,6 @@
 };
 
 / {
-    macros {
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -178,13 +175,13 @@
         space-left {
             bindings = <&kp LC(LEFT)>;
             key-positions = <1 2>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <400>;
         };
 
         space-right {
             bindings = <&kp LC(RIGHT)>;
             key-positions = <2 3>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <400>;
         };
 
         tab-prev {
@@ -276,7 +273,7 @@
         default_layer {
             bindings = <
 &kp Q            &ht LG(W) W          &kp E            &ht LG(R) R           &ht LG(T) T        &kp Y                &kp U              &kp I            &kp O                &kp P
-&hml LEFT_ALT A  &hml LEFT_CONTROL S  &hml LEFT_GUI D  &hml LEFT_SHIFT F     &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J  &hmr LEFT_GUI K  &hmr LEFT_CONTROL L  &hmr LEFT_ALT SQT
+&hml LEFT_GUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F     &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_GUI SQT
 &kp Z            &ht LG(X) X          &ht LG(C) C      &ht LG(V) V           &kp B              &kp N                &kp M              &kp COMMA        &kp DOT              &kp SLASH
                                                        &hold_temp_layer 1 1  &sk LEFT_SHIFT     &kp SPACE            &sl 2
             >;
@@ -284,9 +281,9 @@
 
         num_nav {
             bindings = <
-&none         &none      &kp UP     &none          &none     &kp PERCENT     &kp N5     &kp N2  &kp N3  &kp COLON
-&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END   &kp DOLLAR      &kp N4     &kp N5  &kp N6  &kp N0
-&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &none     &kp UNDERSCORE  &kp MINUS  &kp N8  &kp N9  &kp DOT
+&none         &none      &kp UP     &none          &none      &kp PERCENT     &kp N5     &kp N2  &kp N3  &kp COLON
+&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END    &kp DOLLAR      &kp N4     &kp N5  &kp N6  &kp N0
+&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &none      &kp UNDERSCORE  &kp MINUS  &kp N8  &kp N9  &kp DOT
                                     &trans         &trans     &trans          &trans
             >;
         };
@@ -299,6 +296,5 @@
                                                        &trans                 &trans       &trans     &trans
             >;
         };
-
     };
 };
