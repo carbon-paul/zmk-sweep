@@ -6,6 +6,7 @@
 
 #include "keymap_italian.h"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 // Key definitions
@@ -306,9 +307,9 @@
 
         num_nav {
             bindings = <
-&none         &none      &kp UP     &none          &none      &kp PERCENT     &kp N1     &kp N2  &kp N3  &kp COLON
-&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END    &kp DOLLAR      &kp N4     &kp N5  &kp N6  &kp N0
-&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &none      &kp UNDERSCORE  &kp N7     &kp N8  &kp N9  &kp DOT
+&none         &none      &kp UP     &none          &none      &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
+&kp HOME      &kp LEFT   &kp DOWN   &kp RIGHT      &kp END    &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
+&kp LG(LEFT)  &kp PG_UP  &kp PG_DN  &kp LG(RIGHT)  &none      &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
                                     &trans         &trans     &trans          &trans
             >;
         };
@@ -324,18 +325,10 @@
 
         settings_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                             &trans      &trans          &trans  &trans
             >;
         };
     };
