@@ -145,7 +145,7 @@
 
         escape-combo {
             bindings = <&kp ESC>;
-            key-positions = <20 23>;
+            key-positions = <10 13>;
         };
 
         backspace {
@@ -202,67 +202,17 @@
 
         volume-up {
             bindings = <&kp C_VOLUME_UP>;
-            key-positions = <5 15>;
+            key-positions = <5 6>;
         };
 
         volume-down {
             bindings = <&kp C_VOL_DN>;
-            key-positions = <25 15>;
+            key-positions = <25 26>;
         };
 
         play-pause {
             bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <5 25>;
-        };
-
-        colon-combo {
-            bindings = <&kp COLON>;
-            key-positions = <0 10>;
-        };
-
-        semicolon-combo {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <10 20>;
-        };
-
-        hyphen-combo {
-            bindings = <&kp MINUS>;
-            key-positions = <1 11>;
-        };
-
-        underscore-combo {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <21 11>;
-        };
-
-        parenth-left-combo {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <2 12>;
-        };
-
-        parenth-right-combo {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <12 22>;
-        };
-
-        bracket-left-combo {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <3 13>;
-        };
-
-        bracket-right-combo {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <13 23>;
-        };
-
-        brace-left {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <4 14>;
-        };
-
-        brace-right {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <14 24>;
+            key-positions = <15 16>;
         };
 
         bootloader-left {
