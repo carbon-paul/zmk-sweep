@@ -234,6 +234,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <23 22>;
         };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <27 26>;
+        };
     };
 
     keymap {
@@ -243,10 +248,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &ht LG(W) W          &kp E            &ht LG(R) R           &ht LG(T) T        &kp Y                &kp U              &kp I            &kp O                &kp P
-&hml LEFT_GUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F     &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J  &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_GUI SQT
-&kp Z            &ht LG(X) X          &ht LG(C) C      &ht LG(V) V           &kp B              &kp N                &kp M              &kp COMMA        &kp DOT              &kp SLASH
-                                                       &hold_temp_layer 1 1  &sk LEFT_SHIFT     &kp SPACE            &sl 2
+&kp Q            &ht LG(W) W          &kp E            &ht LG(R) R        &ht LG(T) T        &kp Y                &kp U                 &kp I            &kp O                &kp P
+&hml LEFT_GUI A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LEFT_SHIFT F  &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &hmr LEFT_SHIFT J     &hmr LEFT_ALT K  &hmr LEFT_CONTROL L  &hmr LEFT_GUI SQT
+&lt 1 Z          &ht LG(X) X          &ht LG(C) C      &ht LG(V) V        &kp B              &kp N                &kp M                 &kp COMMA        &kp DOT              &kp SLASH
+                                                       &sl 2              &sk LEFT_SHIFT     &kp SPACE            &hold_temp_layer 1 1
             >;
         };
 
