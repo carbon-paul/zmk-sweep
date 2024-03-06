@@ -151,7 +151,7 @@
 
         escape-combo {
             bindings = <&kp ESC>;
-            key-positions = <10 13>;
+            key-positions = <13 11>;
         };
 
         backspace {
@@ -245,6 +245,21 @@
             bindings = <&kp MINUS>;
             key-positions = <27 26>;
         };
+
+        homerow-open {
+            bindings = <&kp LG(LS(SPACE))>;
+            key-positions = <13 16>;
+        };
+
+        find-app {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <12 17>;
+        };
+
+        goto-numbers {
+            bindings = <&tog 2>;
+            key-positions = <30 33>;
+        };
     };
 
     keymap {
@@ -254,28 +269,28 @@
 
         default_layer {
             bindings = <
-&kp Q            &ht LG(W) W          &kp E            &ht LG(R) R        &ht LG(T) T        &kp Y                &kp U                 &kp I               &kp O                 &kp P
-&lt LAYER_NAV A  &hml LEFT_GUI S      &lt LAYER_NUM D  &lt LAYER_SYM F    &ht LC(SPACE) G    &ht LS(LG(SPACE)) H  &lt LAYER_SYM J       &lt LAYER_NAV K     &hmr LEFT_GUI L       &kp SQT
-&hml LEFT_GUI Z  &hml LEFT_CONTROL X  &hml LEFT_ALT C  &hml LEFT_SHIFT V  &kp B              &kp N                &hmr LEFT_SHIFT M     &hmr LEFT_ALT COMMA &hmr LEFT_CONTROL DOT &hmr LEFT_GUI SLASH
-                                                       &sl LAYER_SYM      &sk LEFT_SHIFT     &kp SPACE            &hold_temp_layer LAYER_NUM LAYER_NUM
+&kp Q            &kp W                &kp E            &kp R                   &kp T             &kp Y      &kp U               &kp I                &kp O                  &kp P
+&lt LAYER_NAV A  &kp S                &lt LAYER_NUM D  &lt LAYER_SYM F         &kp G             &kp H      &lt LAYER_SYM J     &lt LAYER_NAV K      &kp L                  &kp SQT
+&hml LEFT_GUI Z  &hml LEFT_CONTROL X  &hml LEFT_ALT C  &hml LEFT_SHIFT V       &kp B             &kp N      &hmr LEFT_SHIFT M   &hmr LEFT_ALT COMMA  &hmr LEFT_CONTROL DOT  &hmr LEFT_GUI SLASH
+                                                       &ht LEFT_GUI BACKSPACE  &sk LEFT_SHIFT    &kp SPACE  &ht LEFT_GUI ENTER
             >;
         };
 
         nav {
             bindings = <
-&none         &kp LG(LEFT) &kp UP     &kp LG(LEFT)   &none      &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
-&kp HOME      &kp LEFT     &kp DOWN   &kp RIGHT      &kp END    &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
-&none         &kp PG_UP    &kp PG_DN  &none          &none      &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
-                                      &trans         &trans     &trans          &trans
+&none     &kp LG(LEFT)  &kp UP     &kp LG(LEFT)  &none      &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
+&kp HOME  &kp LEFT      &kp DOWN   &kp RIGHT     &kp END    &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
+&none     &kp PG_UP     &kp PG_DN  &none         &none      &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
+                                   &trans        &trans     &trans          &trans
             >;
         };
 
         num {
             bindings = <
-&kp PLUS         &kp MINUS          &kp ASTERISK          &kp SLASH             &kp EQUAL  &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
-&kp LEFT_BRACKET &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp END    &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
-&kp LEFT         &kp UP             &kp DOWN              &kp RIGHT             &none      &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
-                                    &trans                &trans                &trans     &trans
+&kp PLUS          &kp MINUS          &kp ASTERISK          &kp SLASH              &kp EQUAL    &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp END      &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
+&kp LEFT          &kp UP             &kp DOWN              &kp RIGHT              &none        &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
+                                                           &trans                 &trans       &trans          &trans
             >;
         };
 
