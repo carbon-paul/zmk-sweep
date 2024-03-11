@@ -130,7 +130,6 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <400>;
         };
 
         hold_temp_layer: hold_temp_layer {
@@ -141,6 +140,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
+        };
+
+        ht_pref_hold: ht_pref_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_PREF_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
+            retro-tap;
         };
     };
 };
@@ -269,10 +280,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                &kp E            &kp R              &kp T                       &kp Y               &kp U               &kp I                &kp O                  &kp P
-&lt LAYER_NAV A  &kp S                &lt LAYER_NUM D  &lt LAYER_SYM F    &kp G                       &kp H               &lt LAYER_SYM J     &lt LAYER_NAV K      &kp L                  &kp SQT
-&hml LEFT_GUI Z  &hml LEFT_CONTROL X  &hml LEFT_ALT C  &hml LEFT_SHIFT V  &kp B                       &kp N               &hmr LEFT_SHIFT M   &hmr LEFT_ALT COMMA  &hmr LEFT_CONTROL DOT  &hmr LEFT_GUI SLASH
-                                                       &ht LEFT_GUI TAB   &ht LEFT_SHIFT BACKSPACE    &ht LEFT_GUI SPACE  &ht LEFT_GUI ENTER
+&kp Q            &kp W                &kp E            &kp R              &kp T                                 &kp Y               &kp U               &kp I                &kp O                  &kp P
+&lt LAYER_NAV A  &kp S                &lt LAYER_NUM D  &lt LAYER_SYM F    &kp G                                 &kp H               &lt LAYER_SYM J     &lt LAYER_NAV K      &kp L                  &kp SQT
+&hml LEFT_GUI Z  &hml LEFT_CONTROL X  &hml LEFT_ALT C  &hml LEFT_SHIFT V  &kp B                                 &kp N               &hmr LEFT_SHIFT M   &hmr LEFT_ALT COMMA  &hmr LEFT_CONTROL DOT  &hmr LEFT_GUI SLASH
+                                                       &ht LEFT_GUI TAB   &ht_pref_hold LEFT_SHIFT BACKSPACE    &ht LEFT_GUI SPACE  &ht LEFT_GUI ENTER
             >;
         };
 
