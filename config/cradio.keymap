@@ -269,7 +269,7 @@
 
         left-tab {
             bindings = <&kp TAB>;
-            key-positions = <13 12>;
+            key-positions = <12 13>;
         };
     };
 
