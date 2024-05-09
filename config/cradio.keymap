@@ -162,7 +162,7 @@
 
         escape-combo {
             bindings = <&kp ESC>;
-            key-positions = <13 11>;
+            key-positions = <13 10>;
         };
 
         backspace {
@@ -182,7 +182,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <13 14>;
+            key-positions = <13 12>;
         };
 
         capsword {
@@ -210,11 +210,6 @@
         tab-next {
             bindings = <&kp LC(TAB)>;
             key-positions = <23 12>;
-        };
-
-        delete-word {
-            bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <11 12 13>;
         };
 
         volume-up {
