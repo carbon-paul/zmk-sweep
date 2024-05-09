@@ -182,7 +182,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <13 12>;
+            key-positions = <13 11>;
         };
 
         capsword {
