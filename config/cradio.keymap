@@ -162,7 +162,7 @@
 
         escape-combo {
             bindings = <&kp ESC>;
-            key-positions = <13 10>;
+            key-positions = <13 11>;
         };
 
         backspace {
@@ -182,7 +182,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <13 11>;
+            key-positions = <13 12>;
         };
 
         capsword {
@@ -260,11 +260,6 @@
         find-app {
             bindings = <&kp LC(SPACE)>;
             key-positions = <12 17>;
-        };
-
-        left-tab {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
         };
     };
 
