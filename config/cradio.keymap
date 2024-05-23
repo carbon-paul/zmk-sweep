@@ -268,6 +268,15 @@
         };
     };
 
+    macros {
+        typedef: typedef {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp UNDER &kp T>;
+            label = "TYPEDEF";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -293,10 +302,10 @@
 
         num {
             bindings = <
-&kp PLUS          &kp MINUS          &kp ASTERISK          &kp SLASH              &kp EQUAL    &kp PERCENT     &kp N1  &kp N2  &kp N3  &kp COLON
-&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET    &kp DOLLAR      &kp N4  &kp N5  &kp N6  &kp N0
-&kp LEFT          &kp UP             &kp DOWN              &kp RIGHT              &none        &kp UNDERSCORE  &kp N7  &kp N8  &kp N9  &kp DOT
-                                                           &trans                 &trans       &trans          &trans
+&kp PLUS          &kp MINUS          &kp ASTERISK          &kp SLASH              &kp EQUAL    &kp PERCENT     &kp N1    &kp N2  &kp N3  &kp COLON
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp CARET    &kp DOLLAR      &kp N4    &kp N5  &kp N6  &kp N0
+&kp LEFT          &kp UP             &kp DOWN              &kp RIGHT              &none        &kp UNDERSCORE  &kp N7    &kp N8  &kp N9  &kp DOT
+                                                           &trans                 &trans       &kp N0          &typedef
             >;
         };
 
