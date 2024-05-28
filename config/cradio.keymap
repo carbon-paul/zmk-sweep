@@ -153,6 +153,16 @@
             flavor = "hold-preferred";
             retro-tap;
         };
+
+        sticky_tap: sticky_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_TAP";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <80>;
+            flavor = "tap-preferred";
+        };
     };
 };
 
@@ -287,16 +297,16 @@
 &kp Q            &kp W                &kp E            &kp R                   &kp T                           &kp Y               &kp U               &kp I                &kp O                  &kp P
 &lt LAYER_NAV A  &lt 5 S              &lt LAYER_NUM D  &lt LAYER_SYM F         &kp G                           &kp H               &lt LAYER_SYM J     &lt 2 K              &kp L                  &kp SQT
 &hml LEFT_GUI Z  &hml LEFT_CONTROL X  &hml LEFT_ALT C  &hml LEFT_SHIFT V       &kp B                           &kp N               &hmr LEFT_SHIFT M   &hmr LEFT_ALT COMMA  &hmr LEFT_CONTROL DOT  &hmr LEFT_GUI SLASH
-                                                       &ht LEFT_GUI BACKSPACE  &ht_pref_hold LEFT_SHIFT TAB    &ht LEFT_GUI SPACE  &ht LEFT_ALT ENTER
+                                                       &sticky_tap 1 LEFT_GUI  &ht_pref_hold LEFT_SHIFT TAB    &ht LEFT_GUI SPACE  &ht LEFT_ALT ENTER
             >;
         };
 
         nav {
             bindings = <
-&none     &kp LG(LEFT)  &kp UP     &kp LG(RIGHT)  &none      &none         &none         &none          &none        &none
-&kp HOME  &kp LEFT      &kp DOWN   &kp RIGHT      &kp END    &kp LC(DOWN)  &kp LC(LEFT)  &kp LC(GRAVE)  &kp LC(TAB)  &kp LC(RIGHT)
-&none     &kp PG_UP     &kp PG_DN  &none          &none      &none         &none         &none          &none        &none
-                                   &trans         &trans     &trans        &trans
+&none           &kp LC(LEFT)   &kp UP    &kp LC(RIGHT)  &kp PG_UP        &none   &none         &kp PG_UP      &none          &none
+&kp LG(LEFT)    &kp LEFT       &kp DOWN  &kp RIGHT      &kp LG(RIGHT)    &none   &kp LG(LEFT)  &kp PAGE_DOWN  &kp LG(RIGHT)  &none
+&kp LEFT_SHIFT  &kp LC(GRAVE)  &none     &kp LC(TAB)    &kp PAGE_DOWN    &none   &none         &none          &none          &none
+                                         &trans         &trans           &trans  &trans
             >;
         };
 
